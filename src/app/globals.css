@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: purple;
+  text-shadow: 2px 2px yellow;
+}
