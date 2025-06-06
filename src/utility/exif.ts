@@ -1,6 +1,12 @@
-// Placeholder for EXIF extraction utilities
-// In a real setup you might use exifr or a similar library
+import * as exifr from 'exifr';
+
 export async function readExif(file: File) {
-  // TODO: parse EXIF data from file
-  return {};
+  try {
+    const buf = await file.arrayBuffer();
+    const data = await exifr.parse(buf);
+    return data ?? {};
+  } catch (err) {
+    console.error('Failed to read EXIF', err);
+    return {};
+  }
 }

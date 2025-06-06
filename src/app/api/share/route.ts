@@ -2,6 +2,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(request: NextRequest) {
-  // TODO: generate a signed URL or token
-  return NextResponse.json({ url: '/placeholder-private-link' });
+  const token = Math.random().toString(36).slice(2);
+  return NextResponse.json({ url: `/share/${token}` });
 }
