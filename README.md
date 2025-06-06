@@ -11,7 +11,7 @@ This is a simple Next.js project inspired by the nostalgic look of Geocities whi
 - Contact
 - Admin dashboard (for managing posts and photos)
 
-The admin dashboard is intended to integrate with an S3 bucket for photo storage and provide a WYSIWYG markdown editor for blog posts. Photo uploads should read EXIF data using utility functions from `@/utility/exif`. Hidden share links can be generated for private photos.
+The admin dashboard lets you configure an S3 bucket and manage all content. Posts are written using a ReactQuill WYSIWYG editor and can optionally appear on the Projects page. Photo uploads read EXIF data via `@/utility/exif`, allow you to toggle visibility and generate share links for friends.
 
 To get started:
 
